@@ -1,0 +1,167 @@
+i have use a API to Download a PDF so only use live server or any server
+
+Search this category's:
+
+title: "The Lost Chronicle of Eldoria"
+category: "fantasy_quest"
+
+
+## StoryAI: UI Description
+
+StoryAI presents a clean, professional, and modern user interface, heavily influenced by Google's design language. It features a primary color palette of white and light grays, accented by shades of teal for interactive elements and calls to action. The typography, using the 'Poppins' font, is crisp and readable.
+
+1.  **Header:**
+    *   A fixed header at the top displays the "StoryAI" logo (an image `ybai-removebg-preview.png`) on the left.
+    *   On the right, users find:
+        *   A style icon (a 3x3 grid of dots) which, when clicked, reveals a dropdown panel (`apps-grid`) listing app-like sections: "Story Progress," "History," and "Prompt Library."
+        *   A circular profile avatar (displaying an initial or uploaded image). Clicking this opens a "profile Account" style dropdown (`profile-dropdown`) showing the user's email, a larger profile picture with an option to change it, a greeting ("Hi, Priyam!"), a "Sign out" link, and links to "Privacy Policy" & "Terms of Service."
+    *   Both dropdowns feature a subtle blur effect on the content behind them.
+
+2.  **Breadcrumbs:**
+    *   Below the header, a breadcrumb navigation bar appears when on the "Story Page," indicating the path (e.g., "Story > Your Story Title").
+
+3.  **Main Content Area:** The application is page-based, with different views for different functions:
+    *   **Idea Page (`#idea-page`):** This is the primary landing/creation page.
+        *   A prominent heading asks, "What's your story idea?" followed by a descriptive paragraph.
+        *   A central input area includes:
+            *   A "Choose a Category" dropdown (e.g., Digital Adventure, Fantasy Quest).
+            *   A Google-style search bar with a microphone icon for voice input and the placeholder "Describe your story idea here...". A paper plane icon on the right acts as the submit button.
+    *   **Story Page (`#story-page`):**
+        *   A "Back to Idea Page" button.
+        *   The main story title.
+        *   A "Download Story as PDF" button.
+        *   The `story-output` section dynamically displays generated story scenes. Each scene typically has an image and corresponding text, with an alternating layout (image left, text right, then image right, text left).
+        *   If a story isn't found, a "No story found" message with an illustrative GIF is shown.
+    *   **Profile Page (`#profile-page`):**
+        *   Allows users to view and edit their name.
+        *   Displays their email (read-only).
+        *   Features a large profile picture display with a "Change Photo" button (triggering a file upload).
+        *   Buttons to "Save Changes" and "Change Password."
+    *   **Content Pages (`#privacy-policy-page`, `#terms-of-service-page`, `#contact-page`):**
+        *   Standard static content pages for displaying legal information and contact details, each with a "Back to StoryAI" button.
+        *   The Contact page includes a "Give Feedback" button that opens a feedback modal.
+
+4.  **Side Panels (Slide-in):**
+    *   **Story History Panel (`#story-history-panel`):** Slides in from the left.
+        *   Header with "Search History" title, a "Delete History" button (leading to a detailed delete data modal), and a close button.
+        *   A search bar to filter history.
+        *   Content area displays past searches, grouped by "Today," "Yesterday," and "Older," with collapsible sections.
+    *   **Prompt Library Panel (`#prompt-library-panel`):** Slides in from the right.
+        *   Header with "Prompt Library" title, a close button, and a "Create prompt" button.
+        *   A search bar to find prompts.
+        *   Content area lists prompts under "My Personal Library" and "Recommended by Storytell." Each prompt item shows its title, creator, description, a "use" icon, and a "more options" (ellipsis) menu for actions like edit, delete, copy.
+
+5.  **Modals & Popups:**
+    *   **Story Progress Modal (`#story-progress-modal`):** Displays the steps in story generation with icons and status updates (e.g., Idea processing, Story writing, Plot points, Cast).
+    *   **Prompt Modal (`#prompt-modal`):** Used for creating or editing prompts. Includes fields for Name, Description, Prompt text, and a "Save to" selector.
+    *   **Delete Data Modal (`#delete-data-modal`):** Mimics browser "Clear browsing data" functionality. Has "Basic" and "Advanced" tabs, a time range selector, and checkboxes for various data types (browsing history, cookies, cached images, etc.).
+    *   **Feedback Form Modal (`#feedback-form-modal`):** Allows users to send feedback with Subject and Message fields.
+    *   **Feedback Popups (e.g., `#feedback-success-popup`, `#download-success-popup`, `#history-cleared-popup`, `#profile-updated-popup`, `#account-secured-popup`):** Small, centered popups with an icon (e.g., checkmark, shield), title, and message to confirm actions. They auto-dismiss.
+    *   **Change Password OTP Modal (`#change-password-otp-modal`):** Guides the user through OTP verification and then setting a new password.
+    *   **Sign Out Confirmation Popup (`#sign-out-confirm-popup`):** Asks for confirmation before signing the user out.
+    *   All modals and panels have a blurred backdrop when active.
+
+6.  **Footer:**
+    *   Displays the copyright year and links to "Privacy Policy," "Terms of Service," and "Contact Us."
+
+7.  **Interactivity & Styling:**
+    *   The UI employs smooth transitions and animations for opening/closing modals, panels, and dropdowns.
+    *   Hover states and focus indicators are clearly defined for interactive elements.
+    *   Responsive design ensures usability across different screen sizes, with elements like side panels taking full width on smaller screens.
+
+## How to Search for a Story
+
+There are several ways to initiate a story search or view a story:
+
+1.  **Main Story Idea Input (Idea Page):**
+    *   Navigate to the **Idea Page** (this is the default starting page).
+    *   In the "Choose a Category" dropdown, select a genre relevant to your story (e.g., "Fantasy Quest," "Sci-Fi Mystery").
+    *   Locate the main input bar (styled like a Google search bar) with the placeholder "Describe your story idea here...".
+    *   Type your story idea, concept, or keywords into this input bar.
+    *   Click the **paper plane icon** (submit icon) to the right of the input bar, or press the **Enter** key.
+    *   The application will then process your input and navigate to the **Story Page** to display the generated or retrieved story matching your idea and category.
+
+2.  **Voice Search (Idea Page):**
+    *   On the **Idea Page**, click the **microphone icon** located to the left of the story idea input bar.
+    *   If prompted by your browser, grant permission for StoryAI to access your microphone.
+    *   The microphone icon will become active, and the placeholder might change to "Listening...".
+    *   Speak your story idea clearly. The recognized text will automatically populate the input bar.
+    *   Once your idea is transcribed, click the **paper plane icon** or press **Enter** to submit.
+
+3.  **Using Prompts from the Prompt Library:**
+    *   Open the **Prompt Library**: Click the "Google Apps" icon in the header, then select "Prompt Library."
+    *   Browse through "My Personal Library" (your saved prompts) or "Recommended by Storytell."
+    *   Find a prompt you wish to use. You can use the search bar within the library to filter prompts.
+    *   Click on the prompt's main details area, or click the **arrow icon** (Use prompt) associated with it.
+    *   This action will automatically populate the story idea input bar on the **Idea Page** with the selected prompt's text.
+    *   You can then modify the populated text if needed, choose a category, and submit it as described in point 1.
+
+4.  **Revisiting from Story History:**
+    *   Open the **Story History** panel: Click the "Google Apps" icon in the header, then select "History."
+    *   Your past story searches/ideas will be listed, typically grouped by time (Today, Yesterday, Older).
+    *   You can use the search bar within the history panel to find a specific past entry.
+    *   Click on any history item (which includes the query and category).
+    *   This will re-initiate the search using that historical query and category, taking you directly to the **Story Page** with the corresponding story.
+
+## Features
+
+**Core Story Functionality:**
+*   **AI-Powered Story Idea Input:** Users can input natural language descriptions of their story concepts.
+*   **Story Categorization:** Ability to select a specific genre/category for the story idea.
+*   **Dynamic Story Display:** Generated stories are presented with distinct scenes, each potentially including an image and descriptive text.
+*   **Alternating Scene Layout:** Story scenes alternate image/text alignment for visual appeal.
+*   **PDF Download:** Users can download the currently viewed story as a PDF document.
+*   **"No Story Found" Handling:** Gracefully informs the user if no matching story is found for their query.
+
+**Navigation & User Interface:**
+*   **Intuitive Idea Page:** Central hub for initiating story creation.
+*   **Dedicated Story Page:** Clear and focused presentation of story content.
+*   **Profile Page:** For user-specific settings.
+*   **Static Content Pages:** For Privacy Policy, Terms of Service, and Contact information.
+*   **Breadcrumb Navigation:** Provides context on the story page.
+*   **Responsive Design:** Adapts layout for optimal viewing on desktop, tablet, and mobile devices.
+*   **Modern Aesthetics:** Clean, Google-inspired UI with teal accents, smooth animations, and hover/focus effects.
+*   **Blurred Backdrops:** Enhances focus on active modals, dropdowns, and side panels.
+
+**User Account & Personalization:**
+*   **Profile Management:**
+    *   View and update user's display name.
+    *   Upload and change profile picture.
+    *   View registered email (read-only).
+    *   Securely change account password (with OTP verification).
+    *   Sign out functionality with a confirmation step.
+*   **Personalized Avatars:** Displays user's initial or uploaded image in the header and profile sections.
+
+**Productivity & Tools:**
+*   **Story Progress Tracker:** A modal visualizes the (simulated) stages of story generation (Idea, Story, Plot, Cast).
+*   **Story History:**
+    *   Automatically logs past story searches/ideas with their categories and timestamps.
+    *   Allows users to easily revisit or re-run previous ideas.
+    *   Searchable history list.
+    *   History items are grouped by time (Today, Yesterday, Older) in collapsible sections.
+    *   **Comprehensive Data Deletion:** A "Delete browsing data" modal offers Basic and Advanced options to clear history, cookies (simulated), and cached files (simulated) for selected time ranges.
+*   **Prompt Library:**
+    *   Save, manage, and reuse story prompts.
+    *   "My Personal Library" for user-created prompts.
+    *   "Recommended by Storytell" for predefined/suggested prompts.
+    *   Functionality to Create, Edit, Delete, and Copy prompts.
+    *   Directly "Use" a prompt to populate the main story idea input.
+    *   Searchable prompt library.
+*   **Voice Input:** Allows users to dictate their story ideas using their device's microphone.
+
+**User Experience & Accessibility:**
+*   **Custom Focus Styles:** Clear visual indicators for keyboard navigation.
+*   **ARIA Attributes:** Used in various elements (dropdowns, buttons) to improve accessibility for assistive technologies.
+*   **Interactive Modals:** For various functions like progress tracking, prompt creation/editing, feedback submission, data deletion, and user confirmations.
+*   **Pop-up Notifications:** Non-intrusive popups confirm actions like feedback sent, successful downloads, history clearance, profile updates, and password changes.
+*   **Page Loader:** Visual feedback with a spinning logo during page transitions or content loading.
+
+**Communication & Support:**
+*   **Feedback Mechanism:** A dedicated contact form (within a modal) allows users to send messages, suggestions, or report issues.
+*   **Contact Page:** Provides information on how to get in touch.
+
+**Technical (Implied & Visible in JS):**
+*   **Local Storage:** Utilized for persisting user-specific data such as story history, saved prompts, profile name, and profile image.
+*   **Client-Side PDF Generation:** Uses jsPDF and html2canvas to create PDF documents directly in the browser.
+*   **Dynamic Content Rendering:** JavaScript is heavily used to update the DOM, display stories, manage modals, and handle user interactions without full page reloads.
+*   **Single Page Application (SPA) feel:** Transitions between "pages" are handled client-side for a smoother experience.
