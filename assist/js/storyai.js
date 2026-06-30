@@ -1024,10 +1024,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         if (profileGreetingHeader) profileGreetingHeader.textContent = `Hi, ${name || 'User'}!`;
-        if (profileNameInputEl && currentPageId === 'profile-page') profileNameInputEl.value = name || 'Priyam'; // Only set on profile page
-        if (profileEmailInputEl && currentPageId === 'profile-page') profileEmailInputEl.value = 'davepriyam1966@gmail.com'; // Static for now
+        if (profileNameInputEl && currentPageId === 'profile-page') profileNameInputEl.value = name || 'xyz'; // Only set on profile page
+        if (profileEmailInputEl && currentPageId === 'profile-page') profileEmailInputEl.value = 'xyz@gmail.com'; // Static for now
     }
-    function loadProfileData() { const savedName = localStorage.getItem('storyAiUserProfileName') || 'Priyam'; const savedImage = localStorage.getItem('storyAiUserProfileImage'); updateProfileAvatars(savedName, savedImage); }
+    function loadProfileData() { const savedName = localStorage.getItem('storyAiUserProfileName') || 'xyz'; const savedImage = localStorage.getItem('storyAiUserProfileImage'); updateProfileAvatars(savedName, savedImage); }
     function saveProfileData() { if (!profileNameInputEl) return; const name = profileNameInputEl.value.trim(); const imageUrl = localStorage.getItem('storyAiUserProfileImage'); localStorage.setItem('storyAiUserProfileName', name); updateProfileAvatars(name, imageUrl); showProfileUpdatedPopup(); }
 
     if (currentPageId === 'profile-page') {
@@ -1049,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 reader.onload = (e) => {
                     const imageUrl = e.target.result;
                     localStorage.setItem('storyAiUserProfileImage', imageUrl);
-                    const currentName = localStorage.getItem('storyAiUserProfileName') || (profileNameInputEl ? profileNameInputEl.value : 'Priyam');
+                    const currentName = localStorage.getItem('storyAiUserProfileName') || (profileNameInputEl ? profileNameInputEl.value : 'xyz');
                     updateProfileAvatars(currentName, imageUrl); // Updates header avatars globally
                     // If on profile page, also update the large avatar there
                     if (currentPageId === 'profile-page' && profilePageAvatarDisplay) {
