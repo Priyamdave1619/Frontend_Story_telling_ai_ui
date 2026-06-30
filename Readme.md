@@ -36,6 +36,16 @@ A polished, fully static front-end UI for an AI-powered storytelling application
 - Custom focus styles and ARIA attributes for accessibility
 - Page loader animation during transitions
 
+**Screenshots
+
+<img width="1470" height="760" alt="Screenshot 2026-06-30 at 9 16 20 PM" src="https://github.com/user-attachments/assets/b627c236-71be-4029-9c26-03ade98460b0" />
+
+<img width="1469" height="796" alt="Screenshot 2026-06-30 at 9 21 18 PM" src="https://github.com/user-attachments/assets/9324ef17-3d9f-41fc-9e4d-6ad160abac37" />
+
+<img width="1470" height="830" alt="Screenshot 2026-06-30 at 9 21 44 PM" src="https://github.com/user-attachments/assets/5b60fc36-4d62-433b-bf23-932f1d794a78" />
+
+
+
 ## 🛠️ Tech Stack
 
 - **HTML5 / CSS3** — no framework, hand-rolled responsive layout
